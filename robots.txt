@@ -1,0 +1,9 @@
+# Robots.txt para Drica Carmo Photography
+# Permite acesso total aos robôs de busca para indexação máxima
+
+User-agent: *
+Allow: /
+
+# Indica a localização do mapa do site (importante para SEO)
+# Substitua pelo domínio real quando o site for publicado
+Sitemap: https://www.dricacarmo.com/sitemap.xml
