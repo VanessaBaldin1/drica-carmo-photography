@@ -307,11 +307,13 @@ header.scrolled {
 
 .portfolio-grid {
     display: grid;
-    /* Trocamos 'auto-fit' por 'auto-fill' e fixamos 350px em vez de 1fr */
-    grid-template-columns: repeat(auto-fill, 350px); 
+    /* Trocamos auto-fill por auto-fit: isso faz as colunas colapsarem se estiverem vazias */
+    /* O minmax(380px, 1fr) permite que o card tenha no mínimo 380px, mas cresça para ocupar o espaço restante */
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); 
     gap: 30px;
-    justify-content: center; /* Centraliza os cards na tela quando houver poucos */
+    justify-content: center; 
     padding: 20px 0;
+    width: 100%;
 }
 
 .portfolio-item {
@@ -319,12 +321,15 @@ header.scrolled {
     overflow: hidden;
     cursor: pointer;
     border-radius: 8px;
-    /* Definimos um tamanho fixo e natural para o card */
-    width: 350px; 
-    height: 450px; /* Aumentei um pouco a altura para um aspecto mais elegante */
+    /* Removemos o width fixo de 350px para que ele responda ao 1fr do grid */
+    width: 100%; 
+    /* Limitamos o crescimento máximo para não distorcer a foto se sobrar apenas um card no filtro */
+    max-width: 580px; 
+    height: 500px; /* Aumentamos um pouco a altura para manter a elegância com a nova largura */
     background-color: #000;
-    margin: 0 auto; /* Garante centralização individual */
+    margin: 0 auto; 
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease; /* Transição suave para o redimensionamento */
 }
 
 .portfolio-item img {
@@ -631,6 +636,17 @@ footer {
 }
 
 /* --- Media Queries (Responsividade) --- */
+
+@media (min-width: 1200px) {
+    .portfolio-grid {
+        /* Se houver poucos itens, eles não passarão de 3 colunas para manter a estética */
+        grid-template-columns: repeat(auto-fit, minmax(380px, 400px));
+        justify-content: center;
+    }
+}
+
+
+
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;
