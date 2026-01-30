@@ -654,7 +654,7 @@ footer {
     margin: 20px 0;
     opacity: 0;
   }
-
+  
   .burger {
     display: block;
   }
@@ -675,6 +675,39 @@ footer {
   .stats {
     justify-content: center;
   }
+  
+ .carousel-btn {
+        opacity: 1 !important;
+        background: rgba(0, 0, 0, 0.7); /* Um pouco mais escuro para contraste */
+        width: 35px;
+        height: 35px;
+    }
+
+.portfolio-item {
+        width: 90vw; 
+        height: 400px;
+    }
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .burger.toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger.toggle .line2 {
+        opacity: 0;
+    }
+
+    .burger.toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+.burger div {
+    transition: all 0.3s ease;
+}
+
+
 }
 
 @keyframes navLinkFade {
