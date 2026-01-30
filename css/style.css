@@ -724,6 +724,26 @@ footer {
 }
 
 
+
+.cta-group {
+        display: flex;
+        flex-direction: column; /* Empilha os botões um sobre o outro */
+        gap: 15px;             /* Cria o espaço exato entre eles */
+        align-items: center;    /* Garante que fiquem centralizados */
+        margin-top: 20px;
+    }
+
+    .btn-outline {
+        margin-left: 0 !important; /* Remove o margin lateral que existia no desktop */
+        width: 100%;               /* Opcional: faz o botão ocupar a largura para facilitar o clique */
+        max-width: 280px;          /* Limita a largura para não ficar exagerado */
+    }
+
+    .btn-primary {
+        width: 100%;               /* Opcional: segue o mesmo padrão do botão ao lado */
+        max-width: 280px;
+    }
+
 }
 
 @keyframes navLinkFade {
