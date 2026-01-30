@@ -76,4 +76,73 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventListener('scroll', revealOnScroll);
+
+// --- Lógica de Carrossel Interno ---
+    const items = document.querySelectorAll('.portfolio-item');
+    
+    items.forEach(item => {
+        const track = item.querySelector('.carousel-track');
+        const nextBtn = item.querySelector('.next');
+        const prevBtn = item.querySelector('.prev');
+        const images = item.querySelectorAll('.carousel-track img');
+        
+        let index = 0;
+
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (index < images.length - 1) {
+                index++;
+                updateSlide();
+            } else {
+                index = 0; // Volta ao início
+                updateSlide();
+            }
+        });
+
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (index > 0) {
+                index--;
+                updateSlide();
+            } else {
+                index = images.length - 1; // Vai para a última
+                updateSlide();
+            }
+        });
+
+        function updateSlide() {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+    });
+
+    // --- Lógica do Lightbox (Ampliar Foto) ---
+    const modal = document.getElementById("lightboxModal");
+    const modalImg = document.getElementById("imgFull");
+    const captionText = document.getElementById("caption");
+    const closeBtn = document.querySelector(".lightbox-close");
+
+    document.querySelectorAll('.lightbox-trigger').forEach(img => {
+        img.addEventListener('click', function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+            document.body.style.overflow = 'hidden'; // Trava o scroll do fundo
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = "none";
+        document.body.style.overflow = 'auto'; // Libera o scroll
+    });
+
+    // Fechar ao clicar fora da imagem
+    window.addEventListener('click', (e) => {
+        if (e.target == modal) {
+            modal.style.display = "none";
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+
+
 });

@@ -118,49 +118,91 @@
     </section>
 
     <section id="portfolio" class="section bg-darker">
-        <div class="container">
-            <h2 class="section-title center">Portfólio <span>Selecionado</span></h2>
-            
-            <div class="portfolio-filters">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="casamentos">Casamentos</button>
-                <button class="filter-btn" data-filter="ensaios">Ensaios</button>
-                <button class="filter-btn" data-filter="eventos">Eventos</button>
+    <div class="container">
+        <h2 class="section-title center">Portfólio <span>Selecionado</span></h2>
+        
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="Pets Book">Pets Book</button>
+            <button class="filter-btn" data-filter="ensaios">Ensaios</button>
+            <button class="filter-btn" data-filter="eventos">Eventos</button>
+            <button class="filter-btn" data-filter="casamentos">Casamentos</button>
+        </div>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item" data-category="Pets Book">
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <img src="assets/images/aquiles.png" alt="Aquiles" class="lightbox-trigger">
+                        <img src="assets/images/doroteia.png" alt="Doroteia" class="lightbox-trigger">
+                        <img src="assets/images/" alt="Pet 3" class="lightbox-trigger">
+                    </div>
+                    <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="overlay">
+                    <h3>Aquiles & Amigos</h3>
+                    <p>Pets Book</p>
+                </div>
             </div>
 
-            <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="casamentos">
-                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Casamento na praia">
-                    <div class="overlay">
-                        <h3>Casamento Beach</h3>
-                        <p>Casamentos</p>
+            <div class="portfolio-item" data-category="ensaios">
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600" alt="Ensaio 1" class="lightbox-trigger">
+                        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600" alt="Ensaio 2" class="lightbox-trigger">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600" alt="Ensaio 3" class="lightbox-trigger">
                     </div>
+                    <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
                 </div>
-                <div class="portfolio-item" data-category="ensaios">
-                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Ensaio Feminino">
-                    <div class="overlay">
-                        <h3>Ensaio Studio</h3>
-                        <p>Ensaios</p>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="eventos">
-                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Evento Corporativo">
-                    <div class="overlay">
-                        <h3>Gala Night</h3>
-                        <p>Eventos</p>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="casamentos">
-                    <img src="https://images.unsplash.com/photo-1511285560982-1351cdeb9821?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Casamento Clássico">
-                    <div class="overlay">
-                        <h3>Amor Eterno</h3>
-                        <p>Casamentos</p>
-                    </div>
+                <div class="overlay">
+                    <h3>Ensaio Studio</h3>
+                    <p>Ensaios</p>
                 </div>
             </div>
-            <p class="copyright-notice">* Todas as imagens são protegidas por direitos autorais.</p>
+
+            <div class="portfolio-item" data-category="eventos">
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600" alt="Evento 1" class="lightbox-trigger">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600" alt="Evento 2" class="lightbox-trigger">
+                        <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600" alt="Evento 3" class="lightbox-trigger">
+                    </div>
+                    <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="overlay">
+                    <h3>Gala Night</h3>
+                    <p>Eventos</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="casamentos">
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <img src="https://images.unsplash.com/photo-1511285560982-1351cdeb9821?w=600" alt="Casamento 1" class="lightbox-trigger">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600" alt="Casamento 2" class="lightbox-trigger">
+                        <img src="https://images.unsplash.com/photo-1519225495842-7b375442ddcb?w=600" alt="Casamento 3" class="lightbox-trigger">
+                    </div>
+                    <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="overlay">
+                    <h3>Amor Eterno</h3>
+                    <p>Casamentos</p>
+                </div>
+            </div>
         </div>
-    </section>
+        <p class="copyright-notice">* Clique na foto para ampliar. Use as setas para ver mais.</p>
+    </div>
+</section>
+
+<div id="lightboxModal" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="imgFull">
+    <div id="caption"></div>
+</div>
 
     <section id="depoimentos" class="section">
         <div class="container">
